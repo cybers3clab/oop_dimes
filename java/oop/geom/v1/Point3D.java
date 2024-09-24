@@ -1,6 +1,5 @@
 package oop.geom.v1;
 
-
 public class Point3D {
     //Variabili d'istanza
     private double x;
@@ -20,7 +19,7 @@ public class Point3D {
         this.y = p.y;
         this.z = p.z;
     }
-
+//ciaooo
     public double getX() {
         return x;
     }
@@ -54,3 +53,4 @@ public class Point3D {
                 '}';
     }
 }
+
