@@ -10,7 +10,7 @@ public class CartesianPoint2D implements Point2D{
         this.x = x;
         this.y = y;
     }
-    public CartesianPoint2D(){};
+    public CartesianPoint2D(){}
 
     @Override
     public double getX() {
