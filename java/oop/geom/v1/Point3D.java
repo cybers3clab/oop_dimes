@@ -1,5 +1,8 @@
 package oop.geom.v1;
 
+import static java.lang.Math.sqrt;
+
+
 public class Point3D {
     //Variabili d'istanza
     private double x;
@@ -19,7 +22,7 @@ public class Point3D {
         this.y = p.y;
         this.z = p.z;
     }
-//ciaooo
+
     public double getX() {
         return x;
     }
@@ -33,7 +36,14 @@ public class Point3D {
     }
 
     public double distance(Point3D p){
-        return Math.sqrt((p.x-x)*(p.x-x)+(p.y-y)*(p.y-y)+(p.z-z)*(p.z-z));
+        var s=0.0;
+        var d= p.x-x;
+        s+=d*d;
+        d=p.y-y;
+        s+=d*d;
+        d=p.z-z;
+        s+=d*d;
+        return sqrt(s);
     }
 
     @Override
@@ -53,4 +63,3 @@ public class Point3D {
                 '}';
     }
 }
-

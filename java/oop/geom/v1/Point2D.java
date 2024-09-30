@@ -37,14 +37,14 @@ public class Point2D {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Point2D p = (Point2D) o;
+        var p = (Point2D) o;
         return distance(p)<=EPS;
     }
 
 
     public double distance(Point2D p){
-        double dx=p.x-x;
-        double dy=p.y-y;
+        var dx=p.x-x;
+        var dy=p.y-y;
         return Math.sqrt(dx*dx+dy*dy);
     }
 
