@@ -4,17 +4,21 @@ import oop.geom.v3.CartesianPoint3D;
 
 public class MaterialPoint3DUtils {
 
-    public static CartesianPoint3D getBarycenter(MaterialPoint3D[] list){
+    public static CartesianPoint3D getBarycenter(MaterialCartesianPoint3D[] list){
         double x = 0.0;
         double y = 0.0;
         double z = 0.0;
         double tot_mass=0.0;
 
         int index =0;
-        while( index < list.length ){
+        while( index < list.length ) {
 
-            MaterialPoint3D curr = list[index];
+            MaterialCartesianPoint3D curr = list[index];
             tot_mass += curr.getMass();
+        }
+        index =0;
+        while( index < list.length ){
+            MaterialCartesianPoint3D curr = list[index];
             x+=(curr.getPoint3D().getX()*curr.getMass());
             y+=(curr.getPoint3D().getY()*curr.getMass());
             z+=(curr.getPoint3D().getZ()*curr.getMass());

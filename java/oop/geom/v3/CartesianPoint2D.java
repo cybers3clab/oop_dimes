@@ -1,4 +1,6 @@
 package oop.geom.v3;
+import java.util.Objects;
+
 import static java.lang.Math.*;
 
 public class CartesianPoint2D implements Point2D{
