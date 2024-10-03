@@ -1,23 +1,25 @@
-package oop.geom.v1;
+package oop.geom.v3;
 
 import static java.lang.Math.sqrt;
 
 
-public class Point3D {
+
+public class CartesianPoint3D implements Point3D{
     //Variabili d'istanza
     private double x;
     private double y;
     private double z;
+    public static double EPS=1e-10;
 
     //Costruttore
-    public Point3D(double x, double y, double z) {
+    public CartesianPoint3D(double x, double y, double z) {
         this.x = x;
         this.y = y;
         this.z = z;
     }
 
     //Costruttore di Copia
-    public Point3D(Point3D p){
+    public CartesianPoint3D(CartesianPoint3D p){
         this.x = p.x;
         this.y = p.y;
         this.z = p.z;
@@ -35,13 +37,25 @@ public class Point3D {
         return y;
     }
 
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public double getZ() {
+        return z;
+    }
+
+    public void setZ(double z) {
+        this.z = z;
+    }
+
     public double distance(Point3D p){
         var s=0.0;
-        var d= p.x-x;
+        var d= p.getX()-x;
         s+=d*d;
-        d=p.y-y;
+        d=p.getY()-y;
         s+=d*d;
-        d=p.z-z;
+        d=p.getZ()-z;
         s+=d*d;
         return sqrt(s);
     }
@@ -49,9 +63,9 @@ public class Point3D {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Point3D point3D)) return false;
-        Point3D p =(Point3D) o;
-        return this.distance(p)<=Point2D.EPS;
+        if (!(o instanceof CartesianPoint3D point3D)) return false;
+        CartesianPoint3D p =(CartesianPoint3D) o;
+        return this.distance(p)<= EPS ;
     }
 
     @Override
