@@ -1,9 +1,9 @@
-package oop.geom.v3;
-import java.util.Objects;
+package oop.geom.v4;
 
-import static java.lang.Math.*;
+import static java.lang.Math.atan2;
+import static java.lang.Math.sqrt;
 
-public class CartesianPoint2D implements Point2D{
+public class CartesianPoint2D implements Point2D {
 
     private double x;
     private double y;
@@ -34,10 +34,18 @@ public class CartesianPoint2D implements Point2D{
         return atan2(y,x);
     }
 
-    @Override
-    public double distance(Point2D p) {
-        double dx=getX()-p.getX();
-        double dy=getY()-p.getY();
+    //rimuovere!!
+//   @Override
+    public double distance(Point2D p){
+        double dx=x-p.getX();
+        double dy=p.getY()-y;
+        System.out.println("sono il metodo dentro CP!!");
         return sqrt(dx*dx+dy*dy);
+    }
+
+
+    @Override
+    public String toString(){
+        return "<x="+getX()+",y="+getY()+">";
     }
 }
