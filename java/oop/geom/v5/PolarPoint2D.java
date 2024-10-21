@@ -1,9 +1,10 @@
-package oop.geom.v4;
+package oop.geom.v5;
 
-import static java.lang.Math.*;
+import static java.lang.Math.cos;
+import static java.lang.Math.sin;
 
 
-public class PolarPoint2D extends  AbstractPoint2D  {
+public class PolarPoint2D extends AbstractPoint2D {
   private double mod;
   private double ph;
 

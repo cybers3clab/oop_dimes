@@ -23,4 +23,8 @@ public interface Point2D {
         //return new PolarPoint2D(mod,ph);
         return  new CartesianPoint2D(mod*cos(ph),mod*sin(ph));
     }
+
+    public static final double EPS=1e-10;
+
+
 }

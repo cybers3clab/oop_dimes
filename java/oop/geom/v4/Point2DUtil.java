@@ -17,4 +17,8 @@ public class Point2DUtil {
     public static Point2D middlePoint(Point2D ... ap){
         return  Point2D.makeFromCartesian(middleX(ap),middleY(ap));
     }
+
+    public static boolean aligned(Point2D p1, Point2D p2, Point2D p3){
+         return Math.abs((p2.getY()-p1.getY())*(p3.getX()-p2.getX())-(p3.getY()-p2.getY())*(p2.getX()-p1.getX()))<Point2D.EPS;
+    }
 }

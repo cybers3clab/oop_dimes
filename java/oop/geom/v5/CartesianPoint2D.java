@@ -1,4 +1,4 @@
-package oop.geom.v4;
+package oop.geom.v5;
 
 import java.util.Objects;
 
@@ -7,15 +7,18 @@ import static java.lang.Math.sqrt;
 
 public class CartesianPoint2D extends AbstractPoint2D {
 
-    private double x;
-    private double y;
+    private final double x;
+    private final double y;
 
     public CartesianPoint2D(double x, double y) {
 
         this.x = x;
         this.y = y;
     }
-    public CartesianPoint2D(){}
+    public CartesianPoint2D(){
+        this.x=0.0;
+        this.y=0.0;
+    }
 
     @Override
     public double getX() {
@@ -37,14 +40,8 @@ public class CartesianPoint2D extends AbstractPoint2D {
         return atan2(y,x);
     }
 
-    //rimuovere!!
-//   @Override
-    public double distance(Point2D p){
-        double dx=x-p.getX();
-        double dy=p.getY()-y;
-        System.out.println("sono il metodo dentro CP!!");
-        return sqrt(dx*dx+dy*dy);
-    }
+
+
 
 
     @Override
