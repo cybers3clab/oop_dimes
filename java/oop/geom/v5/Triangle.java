@@ -9,9 +9,9 @@ public class Triangle implements Figure2D {
     public Triangle(Point2D p1, Point2D p2, Point2D p3) {
         if(Point2DUtil.aligned(p1,p2,p3))
             throw  new IllegalArgumentException();
-        this.p1 = new BadCartesianPoint2D(p1.getX(),p1.getY());
-        this.p2 = new BadCartesianPoint2D(p2.getX(),p2.getY());;
-        this.p3 = new BadCartesianPoint2D(p3.getX(),p3.getY());;
+        this.p1 = new CartesianPoint2D(p1.getX(),p1.getY());
+        this.p2 = new CartesianPoint2D(p2.getX(),p2.getY());;
+        this.p3 = new CartesianPoint2D(p3.getX(),p3.getY());;
     }
 
 
