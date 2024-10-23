@@ -8,18 +8,18 @@ public class ContoRisparmio extends AbstractBankingAccount {
     }
 
     @Override
-    public boolean deposita(double val) throws Exception {
+    public boolean deposita(double val) throws NegativeFund {
         if(val < 0){
-            throw new Exception();
+            throw new NegativeFund(""+val);
         }
         this.saldo+=val;
         return true;
     }
 
     @Override
-    public boolean preleva(double val) throws Exception {
+    public boolean preleva(double val) throws SaldoInsufficente {
         if(val>saldo){
-            throw new Exception();
+            throw new SaldoInsufficente("saldo="+saldo);
         }
         return false;
     }

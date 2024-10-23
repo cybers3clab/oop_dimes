@@ -17,7 +17,7 @@ public class ContoCorrente extends AbstractBankingAccount {
     }
 
     @Override
-    public boolean preleva(double val) throws NegativeFund {
+    public boolean preleva(double val) throws NegativeFund,SaldoInsufficente {
         if(val < 0){
             throw new NegativeFund("Val minore di 0");
         }
