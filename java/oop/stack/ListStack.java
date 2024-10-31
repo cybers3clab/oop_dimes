@@ -1,14 +1,12 @@
 package oop.stack;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Vector;
 
-public class ListStack1 <E> implements Stack<E>{
+public class ListStack<E> implements Stack<E>{
     private List<E> list;
 
-    public ListStack1() {
+    public ListStack() {
 
         list= new LinkedList<>();
         //list= new Vector<>();
