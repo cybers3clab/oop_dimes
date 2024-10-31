@@ -5,10 +5,10 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class User {
-    private String codice;
-    private String nome;
-    private String cognome;
-    private List<AbstractBankingAccount> ListaContiCorrenti;
+    private final String codice;
+    private final String nome;
+    private final String cognome;
+    private final List<AbstractBankingAccount> ListaContiCorrenti;
 
     public User(String codice, String nome, String cognome) throws InvalidUserIdException {
         if(codice.charAt(0) != 'U'){

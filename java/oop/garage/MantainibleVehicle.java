@@ -1,12 +1,12 @@
 package oop.garage;
 
 public abstract class MantainibleVehicle implements Manutentable,Vehicle{
-    private int km;
+    private final int km;
     private int kmFromLastManutenction;
-    private int ruote;
-    private String marca;
-    private String modello;
-    private String targa;
+    private final int ruote;
+    private final String marca;
+    private final String modello;
+    private final String targa;
     private String name;
 
     public MantainibleVehicle(int km, int kmFromLastManutenction, int ruote, String marca, String modello, String targa) {

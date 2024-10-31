@@ -1,7 +1,7 @@
 package oop.garage;
 
 public class Moto extends MantainibleVehicle{
-    private int cilindrata;
+    private final int cilindrata;
 
     public Moto(int cilindrata,int km, int kmFromLastManutenction, int ruote, String marca, String modello, String targa) {
         super(km, kmFromLastManutenction, ruote, marca, modello, targa);

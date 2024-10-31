@@ -14,7 +14,7 @@ public interface Point2D {
 
 
 
-    public static final double EPS=1e-10;
+    double EPS=1e-10;
 
 
 }

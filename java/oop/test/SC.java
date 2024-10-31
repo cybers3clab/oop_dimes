@@ -1,7 +1,7 @@
 package oop.test;
 
-public class SC  extends Object{
-    private int value;
+public class SC {
+    private final int value;
 
     public SC(int value) {
         this.value = value;

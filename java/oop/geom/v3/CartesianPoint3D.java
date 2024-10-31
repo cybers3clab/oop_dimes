@@ -64,8 +64,7 @@ public class CartesianPoint3D implements Point3D{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof CartesianPoint3D point3D)) return false;
-        CartesianPoint3D p =(CartesianPoint3D) o;
-        return this.distance(p)<= EPS ;
+        return this.distance(point3D)<= EPS ;
     }
 
     @Override

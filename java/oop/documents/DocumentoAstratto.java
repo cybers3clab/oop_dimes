@@ -1,7 +1,7 @@
 package oop.documents;
 
 public abstract class DocumentoAstratto{
-    private String testo;
+    private final String testo;
     private final String proprietario;
     private final String nomeFirma;
     private final int codice;

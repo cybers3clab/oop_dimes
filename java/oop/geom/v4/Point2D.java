@@ -24,7 +24,7 @@ public interface Point2D {
         return  new CartesianPoint2D(mod*cos(ph),mod*sin(ph));
     }
 
-    public static final double EPS=1e-10;
+    double EPS=1e-10;
 
 
 }
