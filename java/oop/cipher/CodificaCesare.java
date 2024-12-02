@@ -26,7 +26,7 @@ public class CodificaCesare {
             shift = -shift; // Inverti lo spostamento per decifrare
         } else {
             System.out.println("Errore: usa -e per cifrare o -d per decifrare.");
-            return;
+            System.exit(-1);
         }
 
         BufferedWriter bw = null;
