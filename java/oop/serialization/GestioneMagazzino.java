@@ -39,7 +39,7 @@ public class GestioneMagazzino {
     public void salvaMagazzino() {
         ObjectOutputStream oos = null;
         try {
-            new ObjectOutputStream(new FileOutputStream(FILE_PATH));
+            oos=new ObjectOutputStream(new FileOutputStream(FILE_PATH));
             oos.writeObject(magazzino);
             System.out.println("Magazzino salvato correttamente!");
         } catch (IOException e) {
@@ -47,7 +47,9 @@ public class GestioneMagazzino {
         }
         finally {
             try {
-                oos.close();
+                if (oos != null) {
+                    oos.close();
+                }
             } catch (IOException e) {
                 System.out.println("Errore in chiusura oos");
             }
@@ -59,12 +61,23 @@ public class GestioneMagazzino {
         System.out.println("Materiale aggiunto con successo!");
     }
 
+    public void aggiungiMaterialePericoloso(String nome, int quantita, double prezzoUnitario,int pericolo) {
+        magazzino.add(new MaterialePericoloso(nome, quantita, prezzoUnitario,pericolo));
+        System.out.println("Materiale Pericoloso aggiunto con successo!");
+    }
+
     public void visualizzaMagazzino() {
         if (magazzino.isEmpty()) {
             System.out.println("Il magazzino è vuoto.");
         } else {
             for (Materiale materiale : magazzino) {
-                System.out.println(materiale);
+                if(materiale.getClass() == Materiale.class)
+                    System.out.println(materiale);
+                else if (materiale.getClass() == MaterialePericoloso.class){
+                    MaterialePericoloso mp=(MaterialePericoloso)materiale;
+                    System.out.println(mp);
+                }
+
             }
         }
     }
@@ -106,6 +119,18 @@ public class GestioneMagazzino {
                 case 4:
                     gestioneMagazzino.salvaMagazzino();
                     System.out.println("Uscita dal programma...");
+                    break;
+
+                case 5:
+                    System.out.print("Inserisci nome materiale pericoloso: ");
+                    String nome1 = scanner.nextLine();
+                    System.out.print("Inserisci quantità: ");
+                    int quantita1 = scanner.nextInt();
+                    System.out.print("Inserisci prezzo unitario: ");
+                    double prezzoUnitario1 = scanner.nextDouble();
+                    System.out.print("Inserisci pericolo: ");
+                    int pericolo= scanner.nextInt();
+                    gestioneMagazzino.aggiungiMaterialePericoloso(nome1, quantita1, prezzoUnitario1,pericolo);
                     break;
 
                 default:
