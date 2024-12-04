@@ -1,0 +1,15 @@
+import tkinter as tk
+def on_print():
+    print(check_var.get())
+root=tk.Tk()
+frame = tk.Frame(root)
+frame.pack()
+check_var = tk.IntVar()
+checkbutton = tk.Checkbutton(frame, text="Opzione 1",variable=check_var, command=on_print)
+checkbutton.pack()
+radio_var = tk.StringVar()
+radiobutton1 = tk.Radiobutton(frame, text="Opzione A",variable=radio_var, value="A")
+radiobutton2 = tk.Radiobutton(frame, text="Opzione B",variable=radio_var, value="B")
+radiobutton1.pack()
+radiobutton2.pack()
+root.mainloop()
