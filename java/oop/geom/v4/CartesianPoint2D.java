@@ -38,7 +38,7 @@ public class CartesianPoint2D extends AbstractPoint2D {
     }
 
     //rimuovere!!
-//   @Override
+   @Override
     public double distance(Point2D p){
         double dx=x-p.getX();
         double dy=p.getY()-y;

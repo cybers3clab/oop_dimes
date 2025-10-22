@@ -14,7 +14,7 @@ public class CartesianPoint2D implements Point2D{
     }
     public CartesianPoint2D(){}
 
-    @Override
+   @Override
     public double getX() {
         return x;
     }
@@ -39,5 +39,13 @@ public class CartesianPoint2D implements Point2D{
         double dx=getX()-p.getX();
         double dy=getY()-p.getY();
         return sqrt(dx*dx+dy*dy);
+    }
+
+    @Override
+    public String toString() {
+        return "CPoint2D{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
     }
 }

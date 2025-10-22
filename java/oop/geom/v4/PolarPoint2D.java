@@ -8,6 +8,10 @@ public class PolarPoint2D extends  AbstractPoint2D  {
   private double ph;
 
     public PolarPoint2D(double mod, double ph) {
+        if(mod<0) throw new IllegalArgumentException("negative module not possible:"+mod);
+
+
+
         this.mod = mod;
         this.ph = ph;
     }

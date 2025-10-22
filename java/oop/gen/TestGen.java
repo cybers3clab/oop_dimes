@@ -1,6 +1,8 @@
 package oop.gen;
 
 import oop.gen.v3.Pair;
+import oop.geom.v4.Point2D;
+import oop.geom.v4.PolarPoint2D;
 
 public class TestGen {
     public static void main(String[] args) {
@@ -16,6 +18,8 @@ public class TestGen {
         System.out.println(pair2.getFirst().getClass());
         System.out.println(pair2.getSecond().getClass());
 
-
+        Pair<String, Point2D> psp= new Pair<>();
+        psp.setFirst("pippo");
+        psp.setSecond(new PolarPoint2D());
     }
 }

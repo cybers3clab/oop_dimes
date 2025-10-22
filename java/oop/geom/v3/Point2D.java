@@ -1,7 +1,7 @@
 package oop.geom.v3;
 
 public interface Point2D {
-    double getX();
+     double getX();
     double getY();
     double getMod();
     double getPhase();

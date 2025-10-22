@@ -1,12 +1,13 @@
 package oop.geom.v5;
 
 public class Rectangle implements Figure2D{
-    private final double base;
-    private final double height;
+    private  double base;
+    private  double height;
 
     public Rectangle(double base, double height) {
 
         //che succede se sono negativi?
+        if(base<=0||height<=0)throw new IllegalArgumentException();
         this.base = base;
         this.height = height;
     }
@@ -15,13 +16,19 @@ public class Rectangle implements Figure2D{
         return base;
     }
 
-
+    public void setBase(double base) {
+        if(base <=0)throw new IllegalArgumentException();
+        this.base = base;
+    }
 
     public double getHeight() {
         return height;
     }
 
-
+    public void setHeight(double height) {
+        if(height<=0) throw new IllegalArgumentException();
+        this.height = height;
+    }
 
     @Override
     public double area() {

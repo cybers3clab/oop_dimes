@@ -4,7 +4,7 @@ package oop.geom.v1;
 public class Point2D {
     private double x;
     private double y;
-    public static double EPS=1e-10;
+    public static final double EPS=1e-10;
 
     public Point2D(double x, double y) {
         this.x = x;

@@ -43,6 +43,11 @@ public class PolarPoint2D implements Point2D{
         return ph;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "PolarPoint2D{" +
+                "mod=" + mod +
+                ", ph=" + ph +
+                '}';
+    }
 }

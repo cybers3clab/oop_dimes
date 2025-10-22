@@ -39,7 +39,10 @@ public class Range implements Iterable<Integer> {
         @Override
         public boolean hasNext() {
             if (!begin)
-                return value < stop;
+                if(step>0)
+                    return value < stop;
+                else
+                    return value > stop;
 
             if (step > 0 && value < Integer.MAX_VALUE - step) return value + step < stop;
             else if (step < 0 && value > Integer.MIN_VALUE - step)

@@ -21,6 +21,7 @@ public interface Point2D {
     }
     static Point2D makeFromPolar(double mod, double ph){
         //return new PolarPoint2D(mod,ph);
+
         return  new CartesianPoint2D(mod*cos(ph),mod*sin(ph));
     }
 

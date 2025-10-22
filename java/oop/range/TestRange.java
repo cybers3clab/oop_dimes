@@ -4,10 +4,14 @@ import java.util.Iterator;
 
 public class TestRange {
     public static void main(String[] args) {
-        Range r= new Range(4,500,100);
+        Range r= new Range(4,7,1);
+
 
         printAll(r);
-        printAll(()->new FakeIterator(0,9));
+
+
+        //Iterator<Integer> fi= new FakeIterator(0,9);
+        //printAll(fi);
     }
 
 
@@ -24,6 +28,7 @@ class FakeIterator implements Iterator<Integer>{
     private final int ub;
 
     public FakeIterator(int lb, int ub) {
+        if(lb>=ub)throw new IllegalArgumentException();
         this.lb = lb;
         this.ub = ub;
         v=lb;

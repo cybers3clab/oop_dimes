@@ -5,7 +5,10 @@ public class Circle implements Figure2D {
 
     public Circle(double r) {
 
-        if (r < 0) throw new NegativeRadiusException("negative radius");
+        if (r < 0){
+            RuntimeException e =new NegativeRadiusException("negative radius");
+            throw e;
+        }
         radius = r;
     }
 
