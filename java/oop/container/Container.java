@@ -23,7 +23,7 @@ public interface Container<E> extends Iterable<E> {
             if (index == i) return elem;
             i++;
         }
-        throw new NoSuchElementException();
+        throw new ArrayIndexOutOfBoundsException();
     }
 
     E set(int index, E elem);

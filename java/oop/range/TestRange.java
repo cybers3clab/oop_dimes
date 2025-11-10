@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class TestRange {
     public static void main(String[] args) {
-        Range r= new Range(4,7,1);
+        Range2 r= new Range2(-4,4,1);
 
 
         printAll(r);

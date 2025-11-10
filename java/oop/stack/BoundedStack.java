@@ -23,7 +23,9 @@ public class BoundedStack<E> implements Stack<E> {
     public E pop() {
         if (isEmpty()) throw new EmptyStackException();
         topIndex--;
-        return (E) data[topIndex];
+        E r= (E)data[topIndex];
+        data[topIndex]=null;
+        return r ;
     }
 
     @Override

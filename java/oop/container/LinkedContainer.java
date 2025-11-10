@@ -54,6 +54,7 @@ public class LinkedContainer<E> extends AbstractContainer<E> {
 
     @Override
     public boolean add(E elem) {
+        Node<E> newNode = new Node<>(elem, null);
 
         Node<E> prev = null;
         Node<E> cur = head;
@@ -61,7 +62,6 @@ public class LinkedContainer<E> extends AbstractContainer<E> {
             prev = cur;
             cur = cur.next;
         }
-        Node<E> newNode = new Node<>(elem, null);
         if (prev == null) {
             head = newNode;
         } else {
@@ -78,7 +78,7 @@ public class LinkedContainer<E> extends AbstractContainer<E> {
         int i=0;
         Node<E> prev = null;
         Node<E> cur = head;
-        while (cur != null&&i<index) {
+        while (cur != null && i<index) {
             prev = cur;
             cur = cur.next;
             i++;
@@ -190,7 +190,7 @@ public class LinkedContainer<E> extends AbstractContainer<E> {
                 prev.next = curr.next;
 
             }
-            curr = curr.next;
+            curr = prev;
             size--;
         }
     }
