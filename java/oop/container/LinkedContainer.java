@@ -194,4 +194,15 @@ public class LinkedContainer<E> extends AbstractContainer<E> {
             size--;
         }
     }
+
+    public static void main(String[] args) {
+        Container<String>c = new LinkedContainer<>();
+        c.add("a");
+        c.add("b");
+        c.add("c");
+        Iterator<String> it = c.iterator();
+        it.next();
+        it.next();
+        it.remove();it.next();
+    }
 }
